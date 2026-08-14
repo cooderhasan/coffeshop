@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Coffee&Library – Kahve, kitap ve keyifli anların buluştuğu Konya'nın en özel kafesi. Japon Parkı'nda sizi bekliyoruz." />
+  <meta name="keywords" content="coffee library konya, kafe konya, coffee and library, japon parkı kafe, kitap kafe" />
+  <meta property="og:title" content="Coffee&Library | Kahve, Kitap, Anlar" />
+  <meta property="og:description" content="Kahvenizi yudumlarken kitabınızın sayfalarında kaybolabileceğiniz özel bir buluşma noktası." />
+  <meta property="og:type" content="website" />
+  <title>Coffee&Library | Kahve · Kitap · Anlar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════════════════════════ -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Coffee&Library Ana Sayfa">
+        <span class="logo-primary">COFFEE</span><span class="logo-amp">&</span><span class="logo-secondary">LIBRARY</span>
+      </a>
+      <nav class="nav-links" role="navigation" aria-label="Ana Navigasyon">
+        <a href="#hero" class="nav-link">Ana Sayfa</a>
+        <a href="#about" class="nav-link">Hakkımızda</a>
+        <a href="#menu" class="nav-link">Menü</a>
+        <a href="#gallery" class="nav-link">Galeri</a>
+        <a href="#location" class="nav-link">Konum</a>
+        <a href="#location" class="nav-cta" id="nav-cta-btn">Bizi Ziyaret Edin</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobil Navigasyon">
+    <button class="mobile-close" id="mobile-close" aria-label="Menüyü kapat">
+      <span></span><span></span>
+    </button>
+    <nav class="mobile-nav" aria-label="Mobil Navigasyon">
+      <a href="#hero" class="mobile-link" data-index="0">Ana Sayfa</a>
+      <a href="#about" class="mobile-link" data-index="1">Hakkımızda</a>
+      <a href="#menu" class="mobile-link" data-index="2">Menü</a>
+      <a href="#gallery" class="mobile-link" data-index="3">Galeri</a>
+      <a href="#location" class="mobile-link" data-index="4">Konum</a>
+    </nav>
+    <a href="#location" class="mobile-cta">Bizi Ziyaret Edin</a>
+    <div class="mobile-footer-text">Coffee · Books · Moments</div>
+  </div>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         1. HERO
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="hero" id="hero" aria-label="Hero Bölümü">
+      <div class="hero-video-wrap">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <source src="video/Create_an_ultra_cinematic_luxu.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero-content reveal-up">
+        <p class="hero-eyebrow">Japon Parkı Şubesi</p>
+        <h1 class="hero-title">
+          Kahvenizi Alın,<br />
+          <em>Kendinize Biraz<br />Zaman Ayırın.</em>
+        </h1>
+        <p class="hero-sub">
+          Kahve, kitap ve keyifli anların aynı atmosferde buluştuğu<br class="desktop-br" />
+          Coffee&Library'ye hoş geldiniz.
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-outline-light" id="hero-menu-btn">Menüyü Keşfet</a>
+          <a href="#about" class="btn btn-ghost-light" id="hero-about-btn">Bizi Keşfedin</a>
+        </div>
+      </div>
+
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span class="scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         2. ABOUT / MARKA HİKAYESİ
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="about-inner">
+        <div class="about-image-col reveal-left">
+          <div class="about-img-wrap">
+            <img
+              src="resimler/c1.png"
+              alt="Coffee&Library iç mekan – bar ve marka tabelası"
+              loading="lazy"
+              class="about-img"
+            />
+            <div class="about-img-accent" aria-hidden="true">MMXVII</div>
+          </div>
+        </div>
+        <div class="about-text-col reveal-right">
+          <span class="section-eyebrow">Hikayemiz</span>
+          <h2 class="about-title" id="about-title">
+            Bir Kahveden<br /><em>Daha Fazlası.</em>
+          </h2>
+          <div class="about-divider" aria-hidden="true"></div>
+          <p class="about-body">
+            Coffee&Library, kahvenizi yudumlarken kitabınızın sayfalarında kaybolabileceğiniz, dostlarınızla keyifli sohbetlere dalabileceğiniz ve günlük hayatın telaşına kısa bir mola verebileceğiniz özel bir buluşma noktası.
+          </p>
+          <p class="about-body about-body--accent">
+            Sıcak bir kahve, sevdiğiniz bir kitap ve kendinize ayırdığınız birkaç saat…<br />
+            Bazen ihtiyacımız olan tek şey budur.
+          </p>
+          <a href="#location" class="btn btn-dark" id="about-visit-btn">Bizi Ziyaret Edin</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         3. COFFEE / LIBRARY / MOMENTS – Editorial Grid
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="experiences" id="experiences" aria-labelledby="exp-title">
+      <div class="exp-header reveal-up">
+        <span class="section-eyebrow">Deneyimler</span>
+        <h2 class="exp-title" id="exp-title">Üç Şey,<br /><em>Sonsuz An.</em></h2>
+      </div>
+      <div class="exp-grid">
+        <article class="exp-card exp-card--large reveal-left" id="exp-coffee">
+          <div class="exp-img-wrap">
+            <img
+              src="resimler/c3.png"
+              alt="Latte art – özenle hazırlanan kahve"
+              loading="lazy"
+              class="exp-img"
+            />
+            <div class="exp-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="exp-content">
+            <span class="exp-label">01</span>
+            <h3 class="exp-name">Coffee</h3>
+            <p class="exp-desc">Özenle hazırlanan kahveler ve günün her anına eşlik eden lezzetler.</p>
+          </div>
+        </article>
+
+        <article class="exp-card exp-card--tall reveal-up" id="exp-library">
+          <div class="exp-img-wrap">
+            <img
+              src="resimler/c9.png"
+              alt="Kitap ve iced latte – kütüphane atmosferi"
+              loading="lazy"
+              class="exp-img"
+            />
+            <div class="exp-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="exp-content">
+            <span class="exp-label">02</span>
+            <h3 class="exp-name">Library</h3>
+            <p class="exp-desc">Bir kitabın sayfalarında kaybolurken zamanın biraz daha yavaş aktığı özel bir atmosfer.</p>
+          </div>
+        </article>
+
+        <article class="exp-card exp-card--medium reveal-right" id="exp-moments">
+          <div class="exp-img-wrap">
+            <img
+              src="resimler/c6.png"
+              alt="Açık alan terası – dostlarla anlar"
+              loading="lazy"
+              class="exp-img"
+            />
+            <div class="exp-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="exp-content">
+            <span class="exp-label">03</span>
+            <h3 class="exp-name">Moments</h3>
+            <p class="exp-desc">Dostlarla uzun sohbetler, sakin bir çalışma günü veya sadece kendinize ayırdığınız birkaç saat.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         4. MENU SECTION – Dark
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="menu-section" id="menu" aria-labelledby="menu-title">
+      <div class="menu-inner">
+        <div class="menu-header reveal-up">
+          <span class="section-eyebrow section-eyebrow--light">Menümüz</span>
+          <h2 class="menu-title" id="menu-title">
+            Bugün Kahveniz<br /><em>Nasıl Olsun?</em>
+          </h2>
+          <p class="menu-sub">
+            Klasiklerden yeni favorilerinize uzanan lezzetlerle,<br class="desktop-br" />
+            her anınıza eşlik edecek bir şey mutlaka var.
+          </p>
+        </div>
+
+        <div class="menu-grid reveal-up">
+          <div class="menu-category">
+            <h3 class="menu-cat-title">Sıcak İçecekler</h3>
+            <ul class="menu-list" role="list">
+              <li class="menu-item"><span class="item-name">Espresso</span><span class="item-dot" aria-hidden="true"></span><span class="item-note">Tek / Çift</span></li>
+              <li class="menu-item"><span class="item-name">Americano</span><span class="item-dot" aria-hidden="true"></span><span class="item-note">Uzun Siyah</span></li>
+              <li class="menu-item"><span class="item-name">Cappuccino</span><span class="item-dot" aria-hidden="true"></span><span class="item-note">Klasik</span></li>
+              <li class="menu-item"><span class="item-name">Latte</span><span class="item-dot" aria-hidden="true"></span><span class="item-note">Süt Köpüklü</span></li>
+              <li class="menu-item"><span class="item-name">Türk Kahvesi</span><span class="item-dot" aria-hidden="true"></span><span class="item-note">Geleneksel</span></li>
+              <li class="menu-item"><span class="item-name">Flat White</span><span class="item-dot" aria-hidden="true"></span><span class="item-note">Yoğun</span></li>
+            </ul>
+          </div>
+
+          <div class="menu-category">
+            <h3 class="menu-cat-title">Soğuk İçecekler</h3>
+            <ul class="menu-list" role="list">
+              <li class="menu-item"><span class="item-name">Iced Latte</span><span class="item-dot" aria-hidden="true"></span><span class="item-note">Buzlu</span></li>
+              <li class="menu-item"><span class="item-name">Cold Brew</span><span class="item-dot" aria-hidden="true"></span><span class="item-note">Soğuk Demleme</span></li>
+              <li class="menu-item"><span class="item-name">Frappé</span><span class="item-dot" aria-hidden="true"></span><span class="item-note">Karışık</span></li>
+              <li class="menu-item"><span class="item-name">Matcha Latte</span><span class="item-dot" aria-hidden="true"></span><span class="item-note">Soğuk</span></li>
+              <li class="menu-item"><span class="item-name">Limonata</span><span class="item-dot" aria-hidden="true"></span><span class="item-note">Taze</span></li>
+              <li class="menu-item"><span class="item-name">Mevsim Soğuk</span><span class="item-dot" aria-hidden="true"></span><span class="item-note">Günlük Özel</span></li>
+            </ul>
+          </div>
+
+          <div class="menu-category">
+            <h3 class="menu-cat-title">Lezzetler</h3>
+            <ul class="menu-list" role="list">
+              <li class="menu-item"><span class="item-name">Cheesecake</span><span class="item-dot" aria-hidden="true"></span><span class="item-note">Günlük Taze</span></li>
+              <li class="menu-item"><span class="item-name">Brownie</span><span class="item-dot" aria-hidden="true"></span><span class="item-note">Çikolatalı</span></li>
+              <li class="menu-item"><span class="item-name">Tost</span><span class="item-dot" aria-hidden="true"></span><span class="item-note">Ev Yapımı</span></li>
+              <li class="menu-item"><span class="item-name">Waffle</span><span class="item-dot" aria-hidden="true"></span><span class="item-note">Özel Soslu</span></li>
+              <li class="menu-item"><span class="item-name">Sandviç</span><span class="item-dot" aria-hidden="true"></span><span class="item-note">Günlük Hazır</span></li>
+              <li class="menu-item"><span class="item-name">Pasta Dilimi</span><span class="item-dot" aria-hidden="true"></span><span class="item-note">Mevsim Özel</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="menu-img-side reveal-right">
+          <img
+            src="resimler/c8.png"
+            alt="Türk kahvesi, cheesecake ve defter"
+            loading="lazy"
+            class="menu-img"
+          />
+        </div>
+
+        <div class="menu-cta-wrap reveal-up">
+          <a href="#location" class="btn btn-outline-cream" id="menu-full-btn">Menüyü İncele</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         5. FULL WIDTH ATMOSPHERE
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="atmosphere" id="atmosphere" aria-label="Atmosfer Görseli">
+      <div class="atm-img-wrap">
+        <img
+          src="resimler/atmosphere.jpg"
+          alt="Coffee&Library – kitaplar, kahve ve sıcak atmosfer"
+          loading="lazy"
+          class="atm-img"
+        />
+        <div class="atm-overlay" aria-hidden="true"></div>
+      </div>
+      <div class="atm-content reveal-up">
+        <p class="atm-line">Bir Kitap.</p>
+        <p class="atm-line">Bir Kahve.</p>
+        <p class="atm-line">Biraz Zaman.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         6. GALLERY
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="gallery-header reveal-up">
+        <span class="section-eyebrow">Galeri</span>
+        <h2 class="gallery-title" id="gallery-title">Coffee&Library'den<br /><em>Kareler</em></h2>
+        <p class="gallery-sub">Kahvenizi hazırladık. Gerisini atmosfere bıraktık.</p>
+      </div>
+      <div class="gallery-masonry">
+        <div class="gallery-col gallery-col--1">
+          <figure class="gallery-item reveal-up" style="--delay: 0s">
+            <img src="resimler/c4.png" alt="Coffee&Library iç mekan – insanlarla dolu sıcak atmosfer" loading="lazy" />
+          </figure>
+          <figure class="gallery-item reveal-up" style="--delay: 0.1s">
+            <img src="resimler/c9.png" alt="Kitap ve iced latte masada" loading="lazy" />
+          </figure>
+        </div>
+        <div class="gallery-col gallery-col--2">
+          <figure class="gallery-item reveal-up" style="--delay: 0.05s">
+            <img src="resimler/c3.png" alt="Latte art – el yapımı kahve" loading="lazy" />
+          </figure>
+          <figure class="gallery-item reveal-up" style="--delay: 0.15s">
+            <img src="resimler/c6.png" alt="Açık alan terası gündüz" loading="lazy" />
+          </figure>
+          <figure class="gallery-item reveal-up" style="--delay: 0.2s">
+            <img src="resimler/c8.png" alt="Türk kahvesi ve cheesecake" loading="lazy" />
+          </figure>
+        </div>
+        <div class="gallery-col gallery-col--3">
+          <figure class="gallery-item reveal-up" style="--delay: 0.1s">
+            <img src="resimler/c7.png" alt="Yazlık oturma alanı" loading="lazy" />
+          </figure>
+          <figure class="gallery-item reveal-up" style="--delay: 0.2s">
+            <img src="resimler/c1.png" alt="Coffee&Library tabelası ve bar" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         7. WORK / READ / PAUSE
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="pause-section" id="pause" aria-labelledby="pause-title">
+      <div class="pause-inner">
+        <div class="pause-text-col reveal-left">
+          <span class="section-eyebrow">Bir Mola</span>
+          <h2 class="pause-title" id="pause-title">
+            Hayat Biraz<br /><em>Bekleyebilir.</em>
+          </h2>
+          <div class="about-divider" aria-hidden="true"></div>
+          <p class="pause-body">
+            Bazen bilgisayarınızı açıp birkaç saat odaklanmak, bazen kitabınızın birkaç sayfasını daha çevirmek, bazen de hiçbir şey yapmadan kahvenizi yudumlamak istersiniz.
+          </p>
+          <p class="pause-body">
+            Coffee&Library, günün temposuna kısa bir mola vermek isteyenler için.
+          </p>
+          <div class="pause-tags" aria-label="Aktiviteler">
+            <span class="pause-tag">Çalış</span>
+            <span class="pause-tag">Oku</span>
+            <span class="pause-tag">Dinlen</span>
+            <span class="pause-tag">Sohbet Et</span>
+          </div>
+        </div>
+        <div class="pause-image-col reveal-right">
+          <div class="pause-img-wrap">
+            <img
+              src="resimler/c7.png"
+              alt="Coffee&Library açık alan – dingin oturma alanı"
+              loading="lazy"
+              class="pause-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         8. INSTAGRAM
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="instagram-section" id="instagram" aria-labelledby="insta-title">
+      <div class="insta-header reveal-up">
+        <span class="section-eyebrow">Sosyal Medya</span>
+        <h2 class="insta-title" id="insta-title">Coffee&Library'de<br /><em>Hayat</em></h2>
+        <p class="insta-sub">Günün kahvesi, küçük anlar ve Coffee&Library'den kareler.</p>
+      </div>
+      <div class="insta-grid reveal-up">
+        <figure class="insta-item">
+          <img src="resimler/c3.png" alt="Latte art Instagram" loading="lazy" />
+        </figure>
+        <figure class="insta-item insta-item--wide">
+          <img src="resimler/c5.png" alt="Kış gecesi Coffee&Library" loading="lazy" />
+        </figure>
+        <figure class="insta-item">
+          <img src="resimler/c8.png" alt="Türk kahvesi ve tatlı" loading="lazy" />
+        </figure>
+        <figure class="insta-item">
+          <img src="resimler/c9.png" alt="Kitap ve iced latte" loading="lazy" />
+        </figure>
+        <figure class="insta-item insta-item--tall">
+          <img src="resimler/c4.png" alt="Coffee&Library iç mekan atmosfer" loading="lazy" />
+        </figure>
+      </div>
+      <div class="insta-cta reveal-up">
+        <a
+          href="https://www.instagram.com/coffeeandlibrarytr/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-dark"
+          id="insta-follow-btn"
+          aria-label="Instagram'da Coffee&Library'yi takip et"
+        >
+          Instagram'da Takip Et
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         9. LOCATION
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="location-section" id="location" aria-labelledby="location-title">
+      <div class="location-inner">
+        <div class="location-info reveal-left">
+          <span class="section-eyebrow">Konum</span>
+          <h2 class="location-title" id="location-title">
+            Buluşma<br /><em>Noktamız.</em>
+          </h2>
+          <p class="location-sub">
+            Kahvenizi, kitabınızı ve kendinize ayıracağınız zamanı yanınıza alın.
+          </p>
+
+          <div class="location-details">
+            <div class="location-row">
+              <div class="loc-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              </div>
+              <div class="loc-detail">
+                <span class="loc-label">Adres</span>
+                <span class="loc-value">Japon Parkı Şubesi</span>
+                <span class="loc-sub-value">Yazır, Ulusal Sk. No:99c, Selçuklu, Konya</span>
+              </div>
+            </div>
+
+            <div class="location-row">
+              <div class="loc-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              </div>
+              <div class="loc-detail">
+                <span class="loc-label">Telefon</span>
+                <span class="loc-value">Bilgi güncelleniyor…</span>
+              </div>
+            </div>
+
+            <div class="location-row">
+              <div class="loc-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="loc-detail">
+                <span class="loc-label">Çalışma Saatleri</span>
+                <span class="loc-value">Hafta içi &amp; Hafta sonu</span>
+                <span class="loc-sub-value">Bilgi güncelleniyor…</span>
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="https://www.google.com/maps/place/Coffee%26Library+(Japon+Park%C4%B1+%C5%9Eube)/@37.977244,32.5155231,17z/data=!3m1!4b1!4m6!3m5!1s0x14d08d3405b7d945:0x5616530e038eedfb!8m2!3d37.977244!4d32.5155231!16s%2Fg%2F11rn0t9x_l?hl=tr-TR"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-dark"
+            id="directions-btn"
+            aria-label="Google Maps'te Coffee&Library Japon Parkı Şubesi için yol tarifi al"
+          >
+            Yol Tarifi Al
+          </a>
+        </div>
+
+        <div class="location-map reveal-right">
+          <div class="map-container">
+            <iframe
+              title="Coffee&Library Japon Parkı Şubesi Konum Haritası"
+              src="https://maps.google.com/maps?q=Coffee%26Library+(Japon+Park%C4%B1+%C5%9Eube)+Konya&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="map-exterior-img">
+            <img
+              src="resimler/c2.png"
+              alt="Coffee&Library dış cephe"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         10. FINAL CTA
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="final-cta" id="final-cta" aria-labelledby="final-title">
+      <div class="final-bg">
+        <img
+          src="resimler/final_cta.jpg"
+          alt="Coffee&Library – sizi bekliyoruz"
+          loading="lazy"
+          class="final-img"
+        />
+        <div class="final-overlay" aria-hidden="true"></div>
+      </div>
+      <div class="final-content reveal-up">
+        <h2 class="final-title" id="final-title">
+          Bugün Kendinize<br /><em>Bir Kahve Ismarlayın.</em>
+        </h2>
+        <div class="final-lines" aria-hidden="true">
+          <span>Biraz durun.</span>
+          <span>Biraz okuyun.</span>
+          <span>Biraz sohbet edin.</span>
+          <span>Hayatın tadını çıkarın.</span>
+        </div>
+        <a href="#location" class="btn btn-outline-light btn--large" id="final-visit-btn">Bizi Ziyaret Edin</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">COFFEE<span class="logo-amp">&</span>LIBRARY</span>
+        <p class="footer-tagline">Coffee · Books · Moments</p>
+      </div>
+
+      <div class="footer-divider" aria-hidden="true"></div>
+
+      <p class="footer-quote">
+        <em>"Bir kahve, bir kitap, biraz zaman… Bazen hepsi bu kadar."</em>
+      </p>
+
+      <nav class="footer-nav" aria-label="Footer Navigasyon">
+        <a href="#hero" class="footer-link">Ana Sayfa</a>
+        <a href="#about" class="footer-link">Hakkımızda</a>
+        <a href="#menu" class="footer-link">Menü</a>
+        <a href="#gallery" class="footer-link">Galeri</a>
+        <a href="#location" class="footer-link">Konum</a>
+      </nav>
+
+      <div class="footer-social">
+        <a
+          href="https://www.instagram.com/coffeeandlibrarytr/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-insta"
+          aria-label="Instagram'da Coffee&Library"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+          </svg>
+          <span class="footer-insta-label">@coffeeandlibrarytr</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Coffee&Library. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
