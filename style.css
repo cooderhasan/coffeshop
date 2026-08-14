@@ -1031,12 +1031,15 @@ button {
 }
 
 /* ══════════════════════════════════════════════════════════════
-   5. ATMOSPHERE
+   5. ATMOSPHERE & MANIFESTO
 ══════════════════════════════════════════════════════════════ */
 .atmosphere {
   position: relative;
-  height: clamp(400px, 65vh, 700px);
+  min-height: clamp(520px, 72vh, 760px);
+  display: flex;
+  align-items: center;
   overflow: hidden;
+  padding: clamp(60px, 8vw, 100px) clamp(24px, 5vw, 80px);
 }
 
 .atm-img-wrap {
@@ -1055,34 +1058,93 @@ button {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    to bottom,
-    rgba(20, 16, 14, 0.5) 0%,
-    rgba(20, 16, 14, 0.35) 50%,
-    rgba(20, 16, 14, 0.6) 100%
+    105deg,
+    rgba(18, 14, 12, 0.88) 0%,
+    rgba(18, 14, 12, 0.65) 45%,
+    rgba(18, 14, 12, 0.3) 100%
   );
 }
 
-.atm-content {
+.atm-container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
   position: relative;
-  z-index: 1;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.3rem;
+  z-index: 2;
 }
 
-.atm-line {
+.atm-card {
+  max-width: 620px;
+  background: rgba(28, 23, 20, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(203, 187, 170, 0.2);
+  padding: clamp(36px, 5vw, 54px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+}
+
+.atm-tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--caramel);
+  margin-bottom: 1.2rem;
+}
+
+.atm-headline {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 5.5vw, 4.5rem);
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
   font-weight: 400;
-  font-style: italic;
+  line-height: 1.15;
   color: var(--soft-white);
-  text-align: center;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
-  opacity: 0.98;
-  letter-spacing: 0.03em;
+  margin-bottom: 1.5rem;
+}
+
+.atm-headline em {
+  font-style: italic;
+  color: var(--warm-sand);
+}
+
+.atm-divider {
+  width: 48px;
+  height: 2px;
+  background: var(--caramel);
+  margin-bottom: 1.5rem;
+}
+
+.atm-subtext {
+  font-family: var(--font-sans);
+  font-size: clamp(0.92rem, 1.2vw, 1.05rem);
+  font-weight: 400;
+  color: rgba(250, 248, 244, 0.85);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.atm-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(203, 187, 170, 0.15);
+  padding-top: 1.4rem;
+}
+
+.atm-meta-item {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--warm-sand);
+}
+
+.atm-meta-dot {
+  color: rgba(203, 187, 170, 0.4);
+  font-size: 0.85rem;
 }
 
 /* ══════════════════════════════════════════════════════════════
