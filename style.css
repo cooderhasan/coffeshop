@@ -2170,8 +2170,10 @@ button {
       "cta"
       "feat"
       "finder";
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto;
+    width: 100%;
+    min-width: 0;
   }
 
   .featured-cards {
@@ -2299,7 +2301,10 @@ button {
 
   /* Menu */
   .menu-section {
-    padding: 64px 20px;
+    padding: 64px 16px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .menu-inner {
@@ -2310,12 +2315,24 @@ button {
       "cta"
       "feat"
       "finder";
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    min-width: 0;
     gap: 32px;
+    box-sizing: border-box;
+  }
+
+  .menu-header,
+  .menu-grid,
+  .menu-category,
+  .menu-list {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
   }
 
   .menu-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 24px;
   }
 
@@ -2457,30 +2474,80 @@ button {
 
   /* Menu Mobile Optimization */
   .menu-tabs-wrap {
+    width: 100%;
     margin-top: 1.4rem;
-    padding-bottom: 6px;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .menu-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 8px;
+    background: transparent;
+    border: none;
+    padding: 0;
   }
 
   .menu-tab {
-    padding: 8px 16px;
-    font-size: 0.68rem;
+    width: 100%;
+    text-align: center;
+    padding: 10px 8px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    background: rgba(42, 33, 29, 0.8);
+    border: 1px solid rgba(203, 187, 170, 0.2);
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+
+  .menu-tab.active {
+    background: var(--caramel);
+    color: var(--espresso);
+    border-color: var(--caramel);
+    box-shadow: 0 4px 12px rgba(166, 124, 91, 0.4);
   }
 
   .menu-item {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 0;
     gap: 6px;
-    padding: 10px 0;
+    padding: 11px 0;
+    box-sizing: border-box;
   }
 
   .item-name {
     font-size: 1.05rem;
+    flex-shrink: 0;
+    order: 0;
   }
 
   .item-note {
     font-size: 0.72rem;
+    color: rgba(203, 187, 170, 0.65);
+    flex-shrink: 0;
+    order: 1;
+  }
+
+  .item-dot {
+    flex: 1;
+    min-width: 6px;
+    order: 2;
   }
 
   .item-price {
-    font-size: 0.88rem;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #D4AF37;
+    flex-shrink: 0;
+    order: 3;
+    margin-left: auto;
+    margin-right: 0;
   }
 
   /* Floating Controls Mobile: Hide duplicate sound/theme buttons to prevent text obstruction */
