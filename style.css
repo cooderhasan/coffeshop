@@ -3262,96 +3262,251 @@ button:focus-visible {
    NIGHT / MOODY AMBIENCE MODE (Gece Modu)
 ══════════════════════════════════════════════════════════════ */
 body.night-mode {
-  --soft-white: #110D0B;
-  --cream: #181310;
-  --text-dark: #F7F4EF;
-  --warm-brown: #D4AF37;
-  background-color: #110D0B;
-  color: #F7F4EF;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  background-color: #120D0A;
+  color: #FAF8F4;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-body.night-mode .about,
-body.night-mode .gallery,
-body.night-mode .instagram-section,
-body.night-mode .reviews-section,
-body.night-mode .location-section {
-  background-color: #110D0B;
-  color: #F7F4EF;
-  transition: background-color 0.5s ease, color 0.5s ease;
+/* 1. About Section in Night Mode */
+body.night-mode .about {
+  background-color: #120D0A;
+  transition: background-color 0.4s ease;
 }
 
-body.night-mode .about-title,
-body.night-mode .gallery-title,
-body.night-mode .insta-title,
-body.night-mode .reviews-title,
-body.night-mode .location-title,
-body.night-mode .pause-title,
+body.night-mode .about-title {
+  color: #FAF8F4;
+}
+
+body.night-mode .about-title em {
+  color: #D4AF37;
+}
+
+body.night-mode .about-body {
+  color: rgba(250, 248, 244, 0.88);
+}
+
+body.night-mode .about-body--accent {
+  color: #D4AF37;
+  border-left-color: #D4AF37;
+}
+
+/* 2. Experiences Section in Night Mode */
+body.night-mode .experiences {
+  background-color: #181310;
+  transition: background-color 0.4s ease;
+}
+
 body.night-mode .exp-title {
   color: #FAF8F4;
 }
 
-body.night-mode .about-body,
-body.night-mode .pause-body,
-body.night-mode .location-sub,
-body.night-mode .review-text,
-body.night-mode .gallery-sub,
-body.night-mode .insta-sub {
-  color: rgba(247, 244, 239, 0.82);
+body.night-mode .exp-title em {
+  color: #D4AF37;
 }
 
-body.night-mode .pause-section,
-body.night-mode .experiences {
-  background-color: #16120F;
+/* 3. Gallery Section in Night Mode */
+body.night-mode .gallery {
+  background-color: #120D0A;
+  transition: background-color 0.4s ease;
+}
+
+body.night-mode .gallery-title {
+  color: #FAF8F4;
+}
+
+body.night-mode .gallery-title em {
+  color: #D4AF37;
+}
+
+body.night-mode .gallery-sub {
+  color: rgba(203, 187, 170, 0.85);
+}
+
+/* 4. Pause / Work-Read Section in Night Mode */
+body.night-mode .pause-section {
+  background-color: #181310;
+  transition: background-color 0.4s ease;
+}
+
+body.night-mode .pause-title {
+  color: #FAF8F4;
+}
+
+body.night-mode .pause-title em {
+  color: #D4AF37;
+}
+
+body.night-mode .pause-body {
+  color: rgba(250, 248, 244, 0.88);
 }
 
 body.night-mode .pause-tag {
   color: #D4AF37;
-  border-color: rgba(212, 175, 55, 0.35);
+  border-color: rgba(212, 175, 55, 0.4);
+  background: rgba(212, 175, 55, 0.08);
 }
 
 body.night-mode .pause-tag:hover {
-  background: rgba(212, 175, 55, 0.12);
+  background: rgba(212, 175, 55, 0.2);
   border-color: #D4AF37;
 }
 
-body.night-mode .review-card {
-  background-color: #191411;
-  border: 1px solid rgba(203, 187, 170, 0.15);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+/* 5. Instagram Section in Night Mode */
+body.night-mode .instagram-section {
+  background-color: #120D0A;
+  transition: background-color 0.4s ease;
 }
 
+body.night-mode .insta-title {
+  color: #FAF8F4;
+}
+
+body.night-mode .insta-title em {
+  color: #D4AF37;
+}
+
+body.night-mode .insta-sub {
+  color: rgba(203, 187, 170, 0.85);
+}
+
+/* 6. Reviews Section in Night Mode */
+body.night-mode .reviews-section {
+  background-color: #181310;
+  transition: background-color 0.4s ease;
+}
+
+body.night-mode .reviews-title {
+  color: #FAF8F4;
+}
+
+body.night-mode .reviews-title em {
+  color: #D4AF37;
+}
+
+body.night-mode .google-badge {
+  background: #241D18;
+  border-color: rgba(203, 187, 170, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+body.night-mode .google-badge-text,
+body.night-mode .google-rating {
+  color: #FAF8F4;
+}
+
+body.night-mode .google-count {
+  color: rgba(203, 187, 170, 0.85);
+}
+
+body.night-mode .review-card {
+  background: #211A16;
+  border: 1px solid rgba(203, 187, 170, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+body.night-mode .review-card:hover {
+  border-color: #D4AF37;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+}
+
+body.night-mode .review-text {
+  color: #FAF8F4;
+}
+
+body.night-mode .review-author {
+  border-top-color: rgba(203, 187, 170, 0.18);
+}
+
+body.night-mode .author-name {
+  color: #FAF8F4;
+}
+
+body.night-mode .author-label {
+  color: #D4AF37;
+}
+
+/* 7. Location Section in Night Mode */
+body.night-mode .location-section {
+  background-color: #120D0A;
+  transition: background-color 0.4s ease;
+}
+
+body.night-mode .location-title {
+  color: #FAF8F4;
+}
+
+body.night-mode .location-title em {
+  color: #D4AF37;
+}
+
+body.night-mode .location-sub {
+  color: rgba(250, 248, 244, 0.85);
+}
+
+body.night-mode .location-row {
+  border-bottom-color: rgba(203, 187, 170, 0.18);
+}
+
+body.night-mode .location-row:first-child {
+  border-top-color: rgba(203, 187, 170, 0.18);
+}
+
+body.night-mode .location-row:hover {
+  background: rgba(203, 187, 170, 0.06);
+}
+
+body.night-mode .loc-icon,
+body.night-mode .loc-label {
+  color: #D4AF37;
+}
+
+body.night-mode .loc-value {
+  color: #FAF8F4;
+}
+
+body.night-mode .loc-value--link {
+  color: #FAF8F4;
+}
+
+body.night-mode .loc-value--link:hover {
+  color: #D4AF37;
+}
+
+body.night-mode .loc-sub-value {
+  color: rgba(203, 187, 170, 0.8);
+}
+
+body.night-mode .map-container {
+  border: 1px solid rgba(203, 187, 170, 0.25);
+}
+
+/* 8. Buttons & Global Controls in Night Mode */
 body.night-mode .btn-dark {
   background: var(--caramel);
-  color: var(--espresso);
+  color: #1C1714;
   border-color: var(--caramel);
+  font-weight: 700;
 }
 
 body.night-mode .btn-dark:hover {
   background: #D4AF37;
   border-color: #D4AF37;
+  color: #1C1714;
 }
 
 body.night-mode .btn-outline-dark {
-  color: var(--warm-sand);
-  border-color: rgba(203, 187, 170, 0.4);
+  color: #FAF8F4;
+  border-color: rgba(203, 187, 170, 0.45);
 }
 
 body.night-mode .btn-outline-dark:hover {
-  background: rgba(203, 187, 170, 0.12);
-  color: var(--soft-white);
-  border-color: var(--warm-sand);
-}
-
-body.night-mode .map-container {
-  border-color: rgba(203, 187, 170, 0.2);
-}
-
-body.night-mode .location-row:hover {
-  background: rgba(203, 187, 170, 0.05);
+  background: rgba(203, 187, 170, 0.15);
+  color: #D4AF37;
+  border-color: #D4AF37;
 }
 
 body.night-mode .nav-ctrl-btn,
 body.night-mode .float-ctrl-btn {
   border-color: rgba(212, 175, 55, 0.4);
 }
+
