@@ -905,9 +905,10 @@ button {
     "header header  side"
     "grid   grid    side"
     "cta    cta     side"
-    "feat   feat    feat";
+    "feat   feat    feat"
+    "finder finder  finder";
   grid-template-columns: 1fr 1fr 420px;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
   gap: clamp(32px, 4vw, 60px) clamp(40px, 5vw, 80px);
   align-items: start;
 }
@@ -2163,7 +2164,8 @@ button {
       "side"
       "grid"
       "cta"
-      "feat";
+      "feat"
+      "finder";
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
@@ -2302,7 +2304,8 @@ button {
       "grid"
       "side"
       "cta"
-      "feat";
+      "feat"
+      "finder";
     grid-template-columns: 1fr;
     gap: 32px;
   }
@@ -2869,8 +2872,11 @@ button:focus-visible {
    FLAVOR FINDER (Interaktif: Kahveni & Eşlikçini Bul Widget)
 ══════════════════════════════════════════════════════════════ */
 .flavor-finder-wrap {
-  grid-area: feat;
-  margin-top: 2rem;
+  grid-area: finder;
+  width: 100%;
+  margin-top: 3.5rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(203, 187, 170, 0.12);
 }
 
 .flavor-finder-card {
