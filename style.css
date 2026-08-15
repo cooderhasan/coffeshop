@@ -3153,9 +3153,20 @@ button:focus-visible {
 
 .qr-code-inner {
   background: #FAF8F4;
-  padding: 12px;
-  border-radius: 12px;
+  padding: 10px;
+  border-radius: 14px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-img {
+  display: block;
+  width: 180px;
+  height: 180px;
+  border-radius: 8px;
+  object-fit: contain;
 }
 
 .qr-scan-hint {

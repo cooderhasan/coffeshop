@@ -567,10 +567,22 @@
   const closeBtn = document.getElementById('qr-modal-close');
   const backdrop = document.getElementById('qr-modal-backdrop');
   const directBtn = document.getElementById('qr-direct-menu-btn');
+  const qrImg = document.getElementById('qr-dynamic-img');
 
   if (!modal || !openBtn) return;
 
+  function updateQRCode() {
+    if (!qrImg) return;
+    let targetUrl = window.location.href.split('#')[0] + '#menu';
+    // Fallback if opened locally as file://
+    if (window.location.protocol === 'file:') {
+      targetUrl = 'https://cooderhasan.github.io/coffeshop/#menu';
+    }
+    qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=8&color=1c1714&bgcolor=FAF8F4&data=${encodeURIComponent(targetUrl)}`;
+  }
+
   function openModal() {
+    updateQRCode();
     modal.classList.add('active');
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -586,6 +598,9 @@
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
   if (backdrop) backdrop.addEventListener('click', closeModal);
   if (directBtn) directBtn.addEventListener('click', closeModal);
+
+  // Initialize once on load
+  updateQRCode();
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('active')) {
